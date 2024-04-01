@@ -63,14 +63,14 @@ interface from being ambiguous.
 
 */
 
-#define	CVAR_NONE		0
+#define	CVAR_NONE			0
 #define	CVAR_ARCHIVE		(1U << 0)	// if set, causes it to be saved to config
-#define	CVAR_NOTIFY		(1U << 1)	// changes will be broadcasted to all players (q1)
+#define	CVAR_NOTIFY			(1U << 1)	// changes will be broadcasted to all players (q1)
 #define	CVAR_SERVERINFO		(1U << 2)	// added to serverinfo will be sent to clients (q1/net_dgrm.c and qwsv)
 #define	CVAR_USERINFO		(1U << 3)	// added to userinfo, will be sent to server (qwcl)
 #define	CVAR_CHANGED		(1U << 4)
-#define	CVAR_ROM		(1U << 6)
-#define	CVAR_LOCKED		(1U << 8)	// locked temporarily
+#define	CVAR_ROM			(1U << 6)
+#define	CVAR_LOCKED			(1U << 8)	// locked temporarily
 #define	CVAR_REGISTERED		(1U << 10)	// the var is added to the list of variables
 #define	CVAR_CALLBACK		(1U << 16)	// var has a callback
 
@@ -83,7 +83,9 @@ typedef struct cvar_s
 	const char	*string;
 	unsigned int	flags;
 	float		value;
-	const char	*default_string; //johnfitz -- remember defaults for reset function
+	
+	//johnfitz -- remember defaults for reset function
+	const char	*default_string; 
 	cvarcallback_t	callback;
 	struct cvar_s	*next;
 } cvar_t;
@@ -92,7 +94,7 @@ void	Cvar_RegisterVariable (cvar_t *variable);
 // registers a cvar that already has the name, string, and optionally
 // the archive elements set.
 
-void Cvar_SetCallback (cvar_t *var, cvarcallback_t func);
+void 	Cvar_SetCallback (cvar_t *var, cvarcallback_t func);
 // set a callback function to the var
 
 void	Cvar_Set (const char *var_name, const char *value);
@@ -105,8 +107,8 @@ void	Cvar_SetROM (const char *var_name, const char *value);
 void	Cvar_SetValueROM (const char *var_name, const float value);
 // sets a CVAR_ROM variable from within the engine
 
-void Cvar_SetQuick (cvar_t *var, const char *value);
-void Cvar_SetValueQuick (cvar_t *var, const float value);
+void 	Cvar_SetQuick (cvar_t *var, const char *value);
+void 	Cvar_SetValueQuick (cvar_t *var, const float value);
 // these two accept a cvar pointer instead of a var name,
 // but are otherwise identical to the "non-Quick" versions.
 // the cvar MUST be registered.

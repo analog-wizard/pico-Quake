@@ -90,21 +90,21 @@ void SV_Init (void)
 
 	sv.edicts = NULL; // ericw -- sv.edicts switched to use malloc()
 
-	Cvar_RegisterVariable (&sv_maxvelocity);
-	Cvar_RegisterVariable (&sv_gravity);
-	Cvar_RegisterVariable (&sv_friction);
-	Cvar_SetCallback (&sv_gravity, Host_Callback_Notify);
-	Cvar_SetCallback (&sv_friction, Host_Callback_Notify);
-	Cvar_RegisterVariable (&sv_edgefriction);
-	Cvar_RegisterVariable (&sv_stopspeed);
-	Cvar_RegisterVariable (&sv_maxspeed);
-	Cvar_SetCallback (&sv_maxspeed, Host_Callback_Notify);
-	Cvar_RegisterVariable (&sv_accelerate);
-	Cvar_RegisterVariable (&sv_idealpitchscale);
-	Cvar_RegisterVariable (&sv_aim);
-	Cvar_RegisterVariable (&sv_nostep);
-	Cvar_RegisterVariable (&sv_freezenonclients);
-	Cvar_RegisterVariable (&sv_altnoclip); //johnfitz
+	Cvar_RegisterVariable 	(&sv_maxvelocity);
+	Cvar_RegisterVariable 	(&sv_gravity);
+	Cvar_RegisterVariable 	(&sv_friction);
+	Cvar_SetCallback 	  	(&sv_gravity, Host_Callback_Notify);
+	Cvar_SetCallback 	  	(&sv_friction, Host_Callback_Notify);
+	Cvar_RegisterVariable 	(&sv_edgefriction);
+	Cvar_RegisterVariable 	(&sv_stopspeed);
+	Cvar_RegisterVariable 	(&sv_maxspeed);
+	Cvar_SetCallback 		(&sv_maxspeed, Host_Callback_Notify);
+	Cvar_RegisterVariable 	(&sv_accelerate);
+	Cvar_RegisterVariable 	(&sv_idealpitchscale);
+	Cvar_RegisterVariable 	(&sv_aim);
+	Cvar_RegisterVariable 	(&sv_nostep);
+	Cvar_RegisterVariable 	(&sv_freezenonclients);
+	Cvar_RegisterVariable 	(&sv_altnoclip); //johnfitz
 
 	Cmd_AddCommand ("sv_protocol", &SV_Protocol_f); //johnfitz
 
