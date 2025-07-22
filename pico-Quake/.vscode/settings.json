@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "compare": "cpp",
+        "cstdint": "cpp",
+        "typeindex": "c",
+        "typeinfo": "c",
+        "chrono": "c",
+        "variant": "c",
+        "ranges": "c",
+        "charconv": "c",
+        "random": "c",
+        "functional": "c",
+        "string.h": "c",
+        "*.q1": "c",
+        "array": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "span": "c",
+        "regex": "c",
+        "utility": "c",
+        "valarray": "c",
+        "format": "c",
+        "*.ipp": "c",
+        "cstring": "c"
+    }
+}
